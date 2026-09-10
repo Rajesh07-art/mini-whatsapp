@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-header">
+        <h3>New Message</h3>
+    </div>
+    <div class="container">
+        <form method="POST" action="/chats" class="form-group">
+            <label>Sender</label>
+            <input placeholder="Your Name" name="from" required>
+
+            <label>Message</label>
+            <textarea name="msg" rows="4" placeholder="Write your message..." required></textarea>
+
+            <label>Receiver</label>
+            <input placeholder="Recipient Name" name="to" required>
+
+            <button class="btn btn-primary" style="width: 100%;">Send Chat</button>
+        </form>
+    </div>
+</body>
+</html>

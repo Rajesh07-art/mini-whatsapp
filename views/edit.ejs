@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-header">
+        <h3>Edit Message</h3>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <p>Editing conversation from <b><%= chat.from %></b> to <b><%= chat.to %></b></p>
+            <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+                <textarea name="msg" rows="5" required><%= chat.msg %></textarea>
+                <button class="btn btn-primary" style="width: 100%;">Update Chat</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

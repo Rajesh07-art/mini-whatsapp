@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #075e54;
+  --secondary-color: #128c7e;
+  --accent-color: #25d366;
+  --bg-color: #efeae2;
+  --card-bg: #ffffff;
+  --text-primary: #111b21;
+  --text-secondary: #667781;
+  --border-color: #e9edef;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* Header Container */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/* Base Container */
+.container {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Chat Card Styling */
+.chat {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.chat-header .from { color: var(--secondary-color); }
+.chat-header .to { color: var(--text-secondary); font-weight: normal; }
+
+/* Message Box */
+.msg {
+  background-color: #d9fdd3;
+  color: var(--text-primary);
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 8px 0;
+  position: relative;
+}
+
+.msg-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Actions Container */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Button Styles */
+.btn {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary:hover { background-color: #20bd5a; }
+
+.btn-edit {
+  color: var(--secondary-color);
+  background: #f0f2f5;
+}
+
+.btn-edit:hover { background: #e4e6eb; }
+
+.btn-delete {
+  color: #ea4335;
+  background: #fce8e6;
+}
+
+.btn-delete:hover { background: #fad2cf; }
+
+/* Form Field Layouts */
+.form-group {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
