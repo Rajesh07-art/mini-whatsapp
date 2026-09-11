@@ -1,3 +1,5 @@
+Created by Rajesh Gadari
+
 # 💬 Mini WhatsApp
 
 A clean and responsive full-stack chat application built using **Node.js, Express, MongoDB, and EJS**. This app features full CRUD functionality (Create, Read, Update, Delete) with a WhatsApp Web-inspired UI layout.
