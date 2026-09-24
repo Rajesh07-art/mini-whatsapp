@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-header">
+        <h3>Chat Details</h3>
+        <a href="/chats" class="btn btn-primary">Back to All Chats</a>
+    </div>
+
+    <div class="container">
+        <div class="chat">
+            <div class="chat-header">
+                <span class="from">From: <%= chat.from %></span>
+                <span class="to">To: <%= chat.to %></span>
+            </div>
+            <div class="msg">
+                <p><%= chat.msg %></p>
+            </div>
+            <div class="msg-footer">
+                <span class="timestamp">
+                    <%= chat.created_at ? chat.created_at.toString() : '' %>
+                </span>
+                <div class="actions">
+                    <a href="/chats/<%= chat._id %>/edit" class="btn btn-edit">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

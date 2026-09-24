@@ -149,3 +149,16 @@ input:focus, textarea:focus {
   outline: none;
   border-color: var(--secondary-color);
 }
+
+/* Show Button Style */
+.btn-show {
+  color: #007bff;
+  background: #e7f0fe;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-show:hover {
+  background: #d0e1fd;
+}
