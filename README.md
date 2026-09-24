@@ -1,15 +1,17 @@
 # 💬 Mini WhatsApp
 
-A clean and responsive full-stack chat application built using **Node.js, Express, MongoDB, and EJS**. This app features full CRUD functionality (Create, Read, Update, Delete) with a WhatsApp Web-inspired UI layout.
+A clean and responsive full-stack chat application built using **Node.js, Express, MongoDB, and EJS**. This app features full CRUD functionality (Create, Read, Update, Delete) with a WhatsApp Web-inspired UI layout and custom error handling.
 
 ---
 
 ## 🚀 Features
 
 * 📩 **Live Message Feed:** Displays active chats with sender, receiver, content, and real-time formatted timestamps.
+* 👁️ **View Message Details:** View individual chats with single-message detailed view.
 * ➕ **Create Conversation:** Instantly post new messages through dedicated forms.
 * ✏️ **Edit Message:** Update chat content dynamically using RESTful PUT routes.
 * 🗑️ **Delete Chat:** Cleanly remove conversations using `method-override` DELETE requests.
+* ⚠️ **Custom Error Handling:** Handled server-side errors gracefully using a custom `ExpressError` class and async wrappers.
 * 🎨 **Modern WhatsApp UI:** Features modern CSS cards, color themes, responsive layouts, and styled action buttons.
 
 ---
@@ -34,24 +36,31 @@ mini-whatsapp/
 │   └── style.css        # Modern WhatsApp-themed CSS
 │-- views/
 │   │-- index.ejs        # All chats display feed
+│   │-- show.ejs         # Individual chat details view
 │   │-- new.ejs          # New message creation form
 │   └── edit.ejs         # Edit chat content form
+│-- ExpressError.js      # Custom Express Error Handling Class
 │-- init.js              # Database seed data script
 │-- index.js             # Express application server & routes
-└── package.json
+│-- package.json
+└── package-lock.json
 
 ---
 
 ## 📦 Installation & Setup
 
+## 📦 Installation & Setup
+
 1. **Clone the repository:**
-git clone https://github.com/Rajesh07-art/mini-whatsapp.git
-cd mini-whatsapp
+   ```bash
+   git clone [https://github.com/Rajesh07-art/mini-whatsapp.git](https://github.com/Rajesh07-art/mini-whatsapp.git)
+   cd mini-whatsapp
 
 
 2. **Install dependencies:**
-mongodb://127.0.0.1:27017/whatsapp
-
+npm install
+Ensure MongoDB is running:
+Make sure MongoDB is running locally on mongodb://127.0.0.1:27017/whatsapp
 
 3. **Seed initial data (Optional):**
 node init.js
@@ -61,8 +70,8 @@ node init.js
 node index.js
 
 
-5. **View in Browser:**
-Open http://localhost:8080/chats
+View in Browser:
+Open http://localhost:8080/chats in your browser.
 
 
 ## 🛣️ API / REST Routes
